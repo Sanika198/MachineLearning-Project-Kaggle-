@@ -1,0 +1,324 @@
+================================================================================
+LR
+________________________________________________________________________________
+Training 
+LogisticRegression(C=0.1, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='multinomial',
+          n_jobs=1, penalty='l2', random_state=None, solver='lbfgs',
+          tol=0.0001, verbose=0, warm_start=False)
+Training time: 0.464s
+Testing time: 0.020s
+Accuracy score: 0.683
+Log loss: 0.880
+Dimensionality: 22264
+Density: 1.000000
+Top 10 keywords per class: 
+EAP: lady said length minutes madame character fact say matter mr
+HPL: later ancient men told gilman thing west street things old
+MWS: england hope idris heart life father adrian love perdita raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.59      0.93      0.72      1991
+        HPL       0.82      0.49      0.61      1385
+        MWS       0.88      0.54      0.67      1519
+
+avg / total       0.75      0.68      0.67      4895
+
+Confusion Matrix:
+[[1849   78   64]
+ [ 664  675   46]
+ [ 632   67  820]]
+
+================================================================================
+L2 penalty
+________________________________________________________________________________
+Training 
+LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.001,
+     verbose=0)
+Training time: 0.187s
+Testing time: 0.019s
+Accuracy score: 0.799
+Log loss: 0.855
+Dimensionality: 22264
+Density: 1.000000
+Top 10 keywords per class: 
+EAP: epoch color altogether evident lady precisely oppodeldoc amid dupin madame
+HPL: musides birch despite pickman west street jermyn innsmouth gilman later
+MWS: misery ryland sister elizabeth windsor miserable idris adrian perdita raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.77      0.84      0.80      1991
+        HPL       0.82      0.77      0.79      1385
+        MWS       0.82      0.77      0.80      1519
+
+avg / total       0.80      0.80      0.80      4895
+
+Confusion Matrix:
+[[1671  152  168]
+ [ 240 1063   82]
+ [ 254   89 1176]]
+
+________________________________________________________________________________
+Training 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', max_iter=None, n_iter=50,
+       n_jobs=1, penalty='l2', power_t=0.5, random_state=None,
+       shuffle=True, tol=None, verbose=0, warm_start=False)
+
+C:\Users\anoop\Anaconda3\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:117: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+
+Training time: 0.245s
+Testing time: 0.014s
+Accuracy score: 0.794
+Log loss: 0.843
+Dimensionality: 22264
+Density: 0.854219
+Top 10 keywords per class: 
+EAP: minutes altogether fact immediately character evident amid dupin lady madame
+HPL: birch pickman despite jermyn uncle innsmouth street gilman west later
+MWS: feelings father plague love miserable windsor idris adrian perdita raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.77      0.84      0.80      1991
+        HPL       0.81      0.76      0.78      1385
+        MWS       0.83      0.77      0.80      1519
+
+avg / total       0.80      0.79      0.79      4895
+
+Confusion Matrix:
+[[1668  163  160]
+ [ 249 1051   85]
+ [ 261   88 1170]]
+
+================================================================================
+L1 penalty
+________________________________________________________________________________
+Training 
+LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l1', random_state=None, tol=0.001,
+     verbose=0)
+Training time: 0.341s
+Testing time: 0.014s
+Accuracy score: 0.780
+Log loss: 0.923
+Dimensionality: 22264
+Density: 0.164556
+Top 10 keywords per class: 
+EAP: evident metzengerstein dupin kate jupiter velocity oppodeldoc color amid madame
+HPL: ahead carter musides despite brown iranon arkham innsmouth later gilman
+MWS: sister elizabeth ryland windsor kirwin protector idris perdita adrian raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.74      0.84      0.79      1991
+        HPL       0.81      0.73      0.77      1385
+        MWS       0.81      0.75      0.78      1519
+
+avg / total       0.78      0.78      0.78      4895
+
+Confusion Matrix:
+[[1669  149  173]
+ [ 283 1008   94]
+ [ 297   83 1139]]
+
+________________________________________________________________________________
+Training 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', max_iter=None, n_iter=50,
+       n_jobs=1, penalty='l1', power_t=0.5, random_state=None,
+       shuffle=True, tol=None, verbose=0, warm_start=False)
+
+C:\Users\anoop\Anaconda3\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:117: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+
+Training time: 0.526s
+Testing time: 0.014s
+Accuracy score: 0.736
+Log loss: 0.920
+Dimensionality: 22264
+Density: 0.057432
+Top 10 keywords per class: 
+EAP: jupiter mr minutes monsieur evident lady character color amid madame
+HPL: outside whilst pickman street jermyn despite west innsmouth later gilman
+MWS: endeavoured miserable tears plague felix windsor idris adrian perdita raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.68      0.84      0.75      1991
+        HPL       0.78      0.66      0.71      1385
+        MWS       0.79      0.67      0.73      1519
+
+avg / total       0.75      0.74      0.73      4895
+
+Confusion Matrix:
+[[1671  156  164]
+ [ 372  911  102]
+ [ 398  100 1021]]
+
+================================================================================
+Elastic-Net penalty
+________________________________________________________________________________
+Training 
+SGDClassifier(alpha=0.0001, average=False, class_weight=None, epsilon=0.1,
+       eta0=0.0, fit_intercept=True, l1_ratio=0.15,
+       learning_rate='optimal', loss='hinge', max_iter=None, n_iter=50,
+       n_jobs=1, penalty='elasticnet', power_t=0.5, random_state=None,
+       shuffle=True, tol=None, verbose=0, warm_start=False)
+
+C:\Users\anoop\Anaconda3\lib\site-packages\sklearn\linear_model\stochastic_gradient.py:117: DeprecationWarning: n_iter parameter is deprecated in 0.19 and will be removed in 0.21. Use max_iter and tol instead.
+  DeprecationWarning)
+
+Training time: 0.543s
+Testing time: 0.016s
+Accuracy score: 0.792
+Log loss: 0.851
+Dimensionality: 22264
+Density: 0.514672
+Top 10 keywords per class: 
+EAP: minutes fact immediately altogether character amid evident dupin lady madame
+HPL: birch pickman despite jermyn uncle innsmouth street gilman west later
+MWS: father quitted love plague miserable windsor idris adrian perdita raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.76      0.85      0.80      1991
+        HPL       0.81      0.74      0.77      1385
+        MWS       0.83      0.76      0.79      1519
+
+avg / total       0.79      0.79      0.79      4895
+
+Confusion Matrix:
+[[1688  150  153]
+ [ 268 1028   89]
+ [ 270   90 1159]]
+
+================================================================================
+Naive Bayes
+________________________________________________________________________________
+Training 
+MultinomialNB(alpha=0.01, class_prior=None, fit_prior=True)
+Training time: 0.034s
+Testing time: 0.018s
+Accuracy score: 0.814
+Log loss: 0.464
+Dimensionality: 22264
+Density: 1.000000
+Top 10 keywords per class: 
+EAP: length matter did long great time man little say said
+HPL: time came saw thing man night things like did old
+MWS: eyes time said father did heart perdita love life raymond
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.81      0.81      0.81      1991
+        HPL       0.83      0.81      0.82      1385
+        MWS       0.80      0.82      0.81      1519
+
+avg / total       0.81      0.81      0.81      4895
+
+Confusion Matrix:
+[[1621  156  214]
+ [ 172 1124   89]
+ [ 208   72 1239]]
+
+________________________________________________________________________________
+Training 
+BernoulliNB(alpha=0.01, binarize=0.0, class_prior=None, fit_prior=True)
+Training time: 0.034s
+Testing time: 0.017s
+Accuracy score: 0.821
+Log loss: 0.776
+Dimensionality: 22264
+Density: 1.000000
+Top 10 keywords per class: 
+EAP: having eyes did long great man time say little said
+HPL: thing came saw time things night man like did old
+MWS: father man said did time eyes heart love raymond life
+
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.80      0.84      0.82      1991
+        HPL       0.86      0.80      0.83      1385
+        MWS       0.81      0.82      0.81      1519
+
+avg / total       0.82      0.82      0.82      4895
+
+Confusion Matrix:
+[[1677  118  196]
+ [ 192 1103   90]
+ [ 221   58 1240]]
+
+================================================================================
+LinearSVC with L1 based regularization
+________________________________________________________________________________
+Training 
+Pipeline(memory=None,
+     steps=[('feature_selection', SelectFromModel(estimator=LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l1', random_state=None, tol=0.001,
+     verbose=0),
+        norm_order=1, prefit=...ax_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0))])
+Training time: 0.475s
+Testing time: 0.019s
+Accuracy score: 0.787
+Log loss: 0.864
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.76      0.83      0.79      1991
+        HPL       0.80      0.75      0.78      1385
+        MWS       0.82      0.76      0.79      1519
+
+avg / total       0.79      0.79      0.79      4895
+
+Confusion Matrix:
+[[1652  162  177]
+ [ 256 1045   84]
+ [ 271   92 1156]]
+
+================================================================================
+________________________________________________________________________________
+Training 
+Pipeline(memory=None,
+     steps=[('feature_selection', SelectFromModel(estimator=LinearSVC(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l1', random_state=None, tol=0.001,
+     verbose=0),
+        norm_order=1, prefit=False, threshold=None)), ('classification', MultinomialNB(alpha=0.01, class_prior=None, fit_prior=True))])
+Training time: 0.335s
+Testing time: 0.019s
+Accuracy score: 0.794
+Log loss: 0.523
+Classification Report:
+             precision    recall  f1-score   support
+
+        EAP       0.77      0.83      0.80      1991
+        HPL       0.82      0.77      0.79      1385
+        MWS       0.81      0.77      0.79      1519
+
+avg / total       0.80      0.79      0.79      4895
+
+Confusion Matrix:
+[[1650  148  193]
+ [ 231 1063   91]
+ [ 259   86 1174]]
+
